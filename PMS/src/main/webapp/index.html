@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>PMS</title>
+<link href="../css/style.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="pvalidation.js"></script>
+
+
+<style>
+body{
+background-image: url('C:\\Users\\99mah\\OneDrive\\Desktop\\your-image.jpeg');
+	background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+}
+
+	.receptionistReg
+	{
+		
+		background-color: rgb(222, 222, 222);
+		padding: 3px;
+		border-radius: 10px;
+		box-shadow: 0 0 20px rgb(0, 0, 0);
+		width:400px;
+		margin:auto;
+	}
+	.x
+	{
+		color:red;
+	}
+	.y 
+	{
+		color:mediumseagreen;
+	}
+	td 
+	{
+		display: block;
+		padding-left: 80px;
+		margin-top: 5px;
+		height:26px;
+	}
+	label
+	{
+		font-weight: bolder;
+	}
+	input[type="text"],[type="email"],[type="password"]
+	{
+		height:30px;
+		text-align: center;
+		border: none;
+		width:220px;
+	}
+	.btn:hover
+	{
+		background-color: darkturquoise;
+		opacity: 0.5;
+	}
+</style>
+</head>
+<body>
+<h2 style="text-align: center;">Register</h2>
+<div class="receptionistReg">
+	<form name="preg" method="post" action="admin/cus.jsp" onsubmit="validationPatientReg();">
+		<table>
+			<tr>
+				
+				<td><label>FirstName</label></td>
+				<td><input type="text" placeholder="First Name"  id="fname" name="fname"></td>
+				<td><span class="x" id="v1"></span><span class="y" id="v2"></span><span class="x" id="v3"></span></td>
+			</tr>
+			<tr>
+				<td><label>LastName</label></td>
+				<td><input type="text" placeholder="Last Name"  id="lname" name="lname"></td>
+				<td><span class="x" id="m1"></span><span class="y" id="m2"></span></td>
+			</tr>
+			<tr>
+				<td><label>Age</label></td>
+				<td><input type="text" placeholder="Age"  id="age" name="age"></td>
+				<td><span class="x" id="n1"></span><span class="y" id="n2"></span></td>
+			</tr>
+			<tr>
+				<td>
+					<label>Gender</label>
+				</td>
+				<td align="center">
+					<input type="radio" value="M" name="gender">
+					<label>Male</label>
+					<input type="radio" value="F" name="gender">
+					<label>Female</label>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Mobile Number</label></td>
+				<td><input type="text" placeholder="+91 XXXXXXXXXX"  id="mobile" name="mobile"></td>
+				<td><span class="x" id="o1"></span><span class="y" id="o2"></span></td>
+			</tr>
+			<tr>
+				<td><label>Email Address</label></td>
+				<td><input type="text" placeholder="example@gmail.com"  id="email" name="email"></td>
+				<td><span class="x" id="p1"></span><span class="y" id="p2"></span></td>
+			</tr>
+			<tr>
+				<td><label>Password</label></td>
+				<td><input type="password" placeholder="Password" id="pass" name="pass"></td>
+				<td><span class="x" id="r1"></span><span class="y" id="r2"></span></td>
+			</tr>
+			<tr>
+				<td><button type="submit" class="btn btn-info">SignUp</button> &nbsp;
+				<a href="patlogin.jsp" class="btn btn-info" style="margin-left: 100px;margin-top:-65px">Existing User ? Click Here</a>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+</body>
+</html>
